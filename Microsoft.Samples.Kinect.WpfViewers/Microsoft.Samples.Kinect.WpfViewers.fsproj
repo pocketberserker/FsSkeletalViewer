@@ -38,6 +38,7 @@
     <Resource Include="KinectColorViewer.xaml" />
     <Compile Include="KinectColorViewer.fs" />
     <Resource Include="KinectDepthViewer.xaml" />
+    <Compile Include="KinectDepthViewer.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
