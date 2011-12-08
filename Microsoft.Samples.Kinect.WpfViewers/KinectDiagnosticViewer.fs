@@ -41,25 +41,25 @@ type KinectDiagnosticViewer() as this =
   let skeletonCanvas = control.FindName "skeletonCanvas" :?> Canvas
 
   let jointColors = [
-    (JointID.HipCenter, new SolidColorBrush(Color.FromRgb(169uy, 176uy, 155uy)));
-    (JointID.Spine, new SolidColorBrush(Color.FromRgb(169uy, 176uy, 155uy)));
-    (JointID.ShoulderCenter, new SolidColorBrush(Color.FromRgb(168uy, 230uy, 29uy)));
-    (JointID.Head, new SolidColorBrush(Color.FromRgb(200uy, 0uy, 0uy)));
-    (JointID.ShoulderLeft, new SolidColorBrush(Color.FromRgb(79uy, 84uy, 33uy)));
-    (JointID.ElbowLeft, new SolidColorBrush(Color.FromRgb(84uy, 33uy, 42uy)));
-    (JointID.WristLeft, new SolidColorBrush(Color.FromRgb(255uy, 126uy, 0uy)));
-    (JointID.HandLeft, new SolidColorBrush(Color.FromRgb(215uy, 86uy, 0uy)));
-    (JointID.ShoulderRight, new SolidColorBrush(Color.FromRgb(33uy, 79uy, 84uy)));
-    (JointID.ElbowRight, new SolidColorBrush(Color.FromRgb(33uy, 33uy, 84uy)));
-    (JointID.WristRight, new SolidColorBrush(Color.FromRgb(77uy, 109uy, 243uy)));
-    (JointID.HandRight, new SolidColorBrush(Color.FromRgb(37uy, 69uy, 243uy)));
-    (JointID.HipLeft, new SolidColorBrush(Color.FromRgb(77uy, 109uy, 243uy)));
-    (JointID.KneeLeft, new SolidColorBrush(Color.FromRgb(69uy, 33uy, 84uy)));
-    (JointID.AnkleLeft, new SolidColorBrush(Color.FromRgb(229uy, 170uy, 122uy)));
-    (JointID.FootLeft, new SolidColorBrush(Color.FromRgb(255uy, 126uy, 0uy)));
-    (JointID.HipRight, new SolidColorBrush(Color.FromRgb(181uy, 165uy, 213uy)));
-    (JointID.KneeRight, new SolidColorBrush(Color.FromRgb(71uy, 222uy, 76uy)));
-    (JointID.AnkleRight, new SolidColorBrush(Color.FromRgb(245uy, 228uy, 156uy)));
+    (JointID.HipCenter, new SolidColorBrush(Color.FromRgb(169uy, 176uy, 155uy)))
+    (JointID.Spine, new SolidColorBrush(Color.FromRgb(169uy, 176uy, 155uy)))
+    (JointID.ShoulderCenter, new SolidColorBrush(Color.FromRgb(168uy, 230uy, 29uy)))
+    (JointID.Head, new SolidColorBrush(Color.FromRgb(200uy, 0uy, 0uy)))
+    (JointID.ShoulderLeft, new SolidColorBrush(Color.FromRgb(79uy, 84uy, 33uy)))
+    (JointID.ElbowLeft, new SolidColorBrush(Color.FromRgb(84uy, 33uy, 42uy)))
+    (JointID.WristLeft, new SolidColorBrush(Color.FromRgb(255uy, 126uy, 0uy)))
+    (JointID.HandLeft, new SolidColorBrush(Color.FromRgb(215uy, 86uy, 0uy)))
+    (JointID.ShoulderRight, new SolidColorBrush(Color.FromRgb(33uy, 79uy, 84uy)))
+    (JointID.ElbowRight, new SolidColorBrush(Color.FromRgb(33uy, 33uy, 84uy)))
+    (JointID.WristRight, new SolidColorBrush(Color.FromRgb(77uy, 109uy, 243uy)))
+    (JointID.HandRight, new SolidColorBrush(Color.FromRgb(37uy, 69uy, 243uy)))
+    (JointID.HipLeft, new SolidColorBrush(Color.FromRgb(77uy, 109uy, 243uy)))
+    (JointID.KneeLeft, new SolidColorBrush(Color.FromRgb(69uy, 33uy, 84uy)))
+    (JointID.AnkleLeft, new SolidColorBrush(Color.FromRgb(229uy, 170uy, 122uy)))
+    (JointID.FootLeft, new SolidColorBrush(Color.FromRgb(255uy, 126uy, 0uy)))
+    (JointID.HipRight, new SolidColorBrush(Color.FromRgb(181uy, 165uy, 213uy)))
+    (JointID.KneeRight, new SolidColorBrush(Color.FromRgb(71uy, 222uy, 76uy)))
+    (JointID.AnkleRight, new SolidColorBrush(Color.FromRgb(245uy, 228uy, 156uy)))
     (JointID.FootRight, new SolidColorBrush(Color.FromRgb(77uy,  109uy, 243uy))) ]
 
   let getDisplayPosition (joint:Joint) =
