@@ -37,6 +37,7 @@
     <Compile Include="InteropBitmapHelper.fs" />
     <Resource Include="KinectColorViewer.xaml" />
     <Compile Include="KinectColorViewer.fs" />
+    <Resource Include="KinectDepthViewer.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
