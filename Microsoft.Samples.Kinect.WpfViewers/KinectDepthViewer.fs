@@ -49,9 +49,9 @@ type KinectDepthViewer() as this =
     let rec convert (i16:int) (i32:int) =
       if i16 < depthFrame16.Length && i32 < depthFrame32.Length then
         let player = if hasPlayerData then byte <| depthFrame16.[i16] &&& 0x07uy else byte <| -1
-        let mutable realDepth = 0uy
-        if hasPlayerData then realDepth <- (depthFrame16.[i16 + 1] <<< 5) ||| (depthFrame16.[i16] >>> 3)
-        else realDepth <- (depthFrame16.[i16 + 1] <<< 8) ||| (depthFrame16.[i16])
+        let realDepth =
+          if hasPlayerData then (depthFrame16.[i16 + 1] <<< 5) ||| (depthFrame16.[i16] >>> 3)
+          else (depthFrame16.[i16 + 1] <<< 8) ||| (depthFrame16.[i16])
         let intensity = byte (255 - (255 * (int <| realDepth) / 0x0fff))
 
         depthFrame32.[i32 + redIndex] <- 0uy
