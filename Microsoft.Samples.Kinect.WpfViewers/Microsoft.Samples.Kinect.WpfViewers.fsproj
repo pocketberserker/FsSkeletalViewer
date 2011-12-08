@@ -40,6 +40,7 @@
     <Resource Include="KinectDepthViewer.xaml" />
     <Compile Include="KinectDepthViewer.fs" />
     <Resource Include="KinectDiagnosticViewer.xaml" />
+    <Compile Include="KinectDiagnosticViewer.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
